@@ -1,0 +1,4 @@
+<app-menu (pageChanged)="changePage($event)"></app-menu>
+<app-home *ngIf="page === 'home'"></app-home>
+<app-profile *ngIf="page === 'profile'" [user] = "currentUser"></app-profile>
+

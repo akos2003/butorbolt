@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #7edfbc;
+  color: #292929;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.profile-summary {
+  margin-bottom: 40px;
+  background-color: #fff8e1;
+  border-left: 6px solid #ffca28;
+}
+
+.wishlist-section {
+  margin-bottom: 50px;
+}
+
+.wishlist-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #4b6c67;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wishlist-card {
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.wishlist-card h3 {
+  margin-top: 10px;
+  color: #3e2723;
+}
+
+.address-section mat-card {
+  padding: 20px;
+  background-color: #e3f2fd;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+button[type="submit"] {
+  margin-top: 16px;
+}
+
+.footer {
+  background-color: #3e2723;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  font-size: 0.9rem;
+}
+
+.wishlist-section {
+  margin: 3rem 0;
+  padding: 1rem;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.wishlist-section h2 {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  color: #3f51b5;
+}
+
+.wishlist-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wishlist-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.wishlist-card img {
+  height: 160px;
+  object-fit: cover;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+
+.wishlist-card mat-card-content {
+  padding: 1rem;
+}
+
+.wishlist-card h3 {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+  color: #212121;
+}
+
+.wishlist-card p {
+  font-size: 0.95rem;
+  color: #666;
+}

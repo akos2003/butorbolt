@@ -1,0 +1,38 @@
+<p>Your opinion matters!</p>
+<section class="reviews-section">
+    <mat-card class="reviews-card">
+      <mat-card-header>
+        <mat-card-title>Customer Reviews</mat-card-title>
+        <mat-card-subtitle>Tell us what you think!</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <form #reviewForm="ngForm" (ngSubmit)="submitReview()">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Your Name</mat-label>
+            <input matInput type="text" name="name" [(ngModel)]="review.name" required>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Your Review</mat-label>
+            <textarea matInput name="review" [(ngModel)]="review.comment" rows="4" required></textarea>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Rating</mat-label>
+            <mat-select [(ngModel)]="review.rating" name="rating" required>
+              <mat-option [value]="5">Excellent</mat-option>
+              <mat-option [value]="4">Good</mat-option>
+              <mat-option [value]="3">Average</mat-option>
+              <mat-option [value]="2">Poor</mat-option>
+              <mat-option [value]="1">Terrible</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" type="submit" [disabled]="!reviewForm.valid">
+            Submit Review
+          </button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+</section>

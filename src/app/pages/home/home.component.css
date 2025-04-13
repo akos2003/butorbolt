@@ -1,0 +1,111 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .about-section {
+    margin-bottom: 50px;
+  }
+  
+  .about-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .about-card mat-card-title {
+    font-size: 2rem;
+    color: #3e2723;
+  }
+  
+  .about-card mat-card-subtitle {
+    color: #5d4037;
+    font-size: 1.1rem;
+    margin-top: 8px;
+  }
+  
+  .about-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 15px;
+  }
+  
+  .reviews-section {
+    margin-top: 50px;
+  }
+  
+  .reviews-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .reviews-card mat-card-title {
+    font-size: 2rem;
+    color: #3e2723;
+  }
+  
+  .reviews-card mat-card-subtitle {
+    color: #5d4037;
+    font-size: 1.1rem;
+    margin-top: 8px;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .mat-form-field .mat-label {
+    color: #3e2723;
+  }
+  
+  .mat-form-field .mat-input-element {
+    padding: 12px;
+    font-size: 1rem;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffb74d;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #ff9800;
+  }
+
+  .footer {
+    background-color: #3e2723;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: 60px;
+  }
+  

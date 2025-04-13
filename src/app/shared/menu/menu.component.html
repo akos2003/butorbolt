@@ -1,0 +1,19 @@
+<header>
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-md-12 col-sm-12 col-12 text-end">
+          <div class="menu-icon" (click)="startMenu()">
+            <i class="{{menu_icon}}"></i>
+          </div>
+          <div class="desktop-menu" [class.mobile-menu]="menuValue">
+            <ul>
+              <li (click)="changeMenu('home');">Home</li>
+              <li (click)="changeMenu('shop');">Shop</li>
+              <li (click)="changeMenu('profile');">Profile</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
