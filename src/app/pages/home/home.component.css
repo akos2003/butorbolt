@@ -108,4 +108,52 @@
     font-size: 0.9rem;
     margin-top: 60px;
   }
+
+  .login-section {
+    margin-top: 50px;
+  }
+  
+  .login-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .login-card mat-card-title {
+    font-size: 1.8rem;
+    color: #3e2723;
+  }
+  
+  .login-card mat-card-subtitle {
+    color: #5d4037;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  .register-section {
+    margin-top: 50px;
+  }
+  
+  .register-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .register-card mat-card-title {
+    font-size: 1.8rem;
+    color: #3e2723;
+  }
+  
+  .register-card mat-card-subtitle {
+    color: #5d4037;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+    
   

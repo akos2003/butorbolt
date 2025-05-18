@@ -22,6 +22,7 @@ export class MenuComponent implements OnInit, AfterViewInit {
      this.menuValue = false;
      this.menu_icon = 'bi bi-list';
      this.pageChanged.emit(page);
+     console.log("we are going to:" + page);
    }
 
   ngOnInit(): void {

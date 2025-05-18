@@ -1,7 +1,7 @@
 import { DeliveryAddress } from './deliveryAddress-object';
 
 export class Customer {
-  id: number;
+  id: string;
   name: string;
   email: string;
   password: string;
@@ -14,7 +14,7 @@ export class Customer {
     email: string,
     password: string,
     phone: string,
-    id: number,
+    id: string,
     address: DeliveryAddress
   );
   constructor(
@@ -22,10 +22,10 @@ export class Customer {
     email?: string,
     password?: string,
     phone?: string,
-    id?: number,
+    id?: string,
     address?: DeliveryAddress
   ) {
-    this.id = typeof id === 'number' ? id : 0;
+    this.id = id || '';
     this.name = name || '';
     this.email = email || '';
     this.password = password || '';

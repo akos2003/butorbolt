@@ -1,0 +1,55 @@
+
+.suggestion-container {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 20px;
+  }
+  
+ 
+  .suggestion-card {
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+  
+
+  .full-width {
+    width: 100%;
+    background-color: #564444;
+  }
+  
+
+  mat-form-field.mat-form-field {
+    background-color: #f3f3f3;
+    border-radius: 6px;
+  }
+
+  input.mat-input-element,
+  textarea.mat-input-element {
+    background-color: #574a4a !important;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+
+  .mat-form-field-label {
+    color: #3e2723 !important;
+  }
+  
+  button[type="submit"] {
+    margin-top: 20px;
+    background-color: #ffb74d;
+    color: white;
+    font-weight: bold;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #ff9800;
+  }
+  
+  mat-card-title {
+    font-size: 1.5rem;
+    color: #3e2723;
+  }
+  

@@ -40,9 +40,13 @@ import { NgForOf } from '@angular/common';
 })
 export class ProfileComponent {
   @Input() user!: Customer;
-  @Output() newAddress = new EventEmitter<DeliveryAddress>();
 
-  constructor(private snackBar: MatSnackBar) {}
+  @Output() newAddress = new EventEmitter<DeliveryAddress>();
+  @Output() updateCustomer = new EventEmitter<Customer>();
+
+  constructor(private snackBar: MatSnackBar) {
+
+  }
 
   wishlist = [
     {

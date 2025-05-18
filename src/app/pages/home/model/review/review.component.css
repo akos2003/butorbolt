@@ -1,0 +1,85 @@
+.reviews-section {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+  }
+  
+  .reviews-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .reviews-card mat-card-title {
+    font-size: 1.8rem;
+    color: #3e2723;
+  }
+  
+  .reviews-card mat-card-subtitle {
+    color: #5d4037;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .full-width {
+    background: #413d3d;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  textarea.mat-input-element {
+    resize: vertical;
+    padding: 12px;
+    font-size: 1rem;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    background-color: #81c784; /* Green to differentiate from login */
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #66bb6a;
+  }
+  
+  .mat-form-field {
+    background-color: #f9f9f9;
+    border-radius: 4px;
+  }
+  
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #ccc;
+  }
+  
+  .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    border-color: #ccc;
+  }
+  
+  .mat-input-element {
+    padding: 12px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .mat-form-field .mat-label {
+    color: #3e2723 !important;
+  }
+  
+  .mat-select-value {
+    color: #333;
+  }
+  
+  textarea.mat-input-element {
+    background-color: #f9f9f9;
+  }
+  
