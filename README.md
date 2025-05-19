@@ -1,5 +1,5 @@
 # butorbolt - Bútor webshop
-hosting:  [webkeret-d628a.firebaseapp.com](https://webkeret-d628a.web.app/)
+hosting:  [[webkeret-d628a.firebaseapp.com](https://webkeret-d628a.web.app/)](https://webkeret-d628a.firebaseapp.com/)
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
 
