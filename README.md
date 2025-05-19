@@ -1,5 +1,5 @@
 # butorbolt - Bútor webshop
-hosting:  https://webkeret-d628a.web.app
+hosting:  https://webkeret-d628a.web.app.com
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
 
