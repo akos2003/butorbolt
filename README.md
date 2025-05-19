@@ -1,5 +1,6 @@
 # butorbolt - Bútor webshop
 hosting:  https://webkeret-d628a.firebaseapp.com/
+Egy már meglévő user: asd@asd.com jelszó: asdasd
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
 
