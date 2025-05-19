@@ -14,6 +14,7 @@ import {
   createUserWithEmailAndPassword,
   user
 } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 
 import { 
   Firestore, 
@@ -33,8 +34,9 @@ export class AuthService {
 
   constructor(
     private auth: Auth,
-    private firestore: Firestore
+    private firestore: Firestore, private router : Router
   ) {
+
     this.currentUser = authState(this.auth).pipe(
       switchMap((user: User | null) => {
         if (!user) {
@@ -57,7 +59,6 @@ export class AuthService {
               );
   
               this.currentUserSubject.next(userObj);
-              console.log("userObject" + userObj);
               return userObj;
             } else {
               const fallbackUser = new Customer(
@@ -75,15 +76,37 @@ export class AuthService {
         );
       })
     );
+
   }
 
   signIn(email: string, password: string): Promise<UserCredential> {
-    return signInWithEmailAndPassword(this.auth, email, password);
-  }
+  return signInWithEmailAndPassword(this.auth, email, password)
+    .then((credential) => {
+      const uid = credential.user.uid;
+      const userDocRef = doc(this.firestore, 'Users', uid);
+      return getDoc(userDocRef).then((snapshot) => {
+        const data = snapshot.data();
+        if (data) {
+          const userObj = new Customer(
+            data['name'] ?? '',
+            data['email'] ?? credential.user.email,
+            '',
+            data['phone'] ?? '',
+            data['id'] ?? uid,
+            data['address'] ?? { value: null } as unknown as DeliveryAddress
+          );
+          this.currentUserSubject.next(userObj);
+        }
+        return credential;
+      });
+    });
+}
+
 
   signOut(): Promise<void> {
     localStorage.setItem('isLoggedIn', 'false');
     return signOut(this.auth).then(() => {
+       this.router.navigate(['/home'])
     });
   }
 
@@ -93,7 +116,6 @@ export class AuthService {
 
   updateLoginStatus(isLoggedIn: boolean): void {
     localStorage.setItem('isLoggedIn', isLoggedIn ? 'true' : 'false');
-    console.log("user is "+ this.currentUser)
   }
 
   async signUp(email: string, password: string, userData: Partial<Customer>): Promise<UserCredential> {

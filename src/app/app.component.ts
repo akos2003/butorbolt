@@ -1,16 +1,12 @@
 import { Component } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { ProfileComponent } from './pages/profile/profile.component';
 import { MenuComponent } from './shared/menu/menu.component';
-import { NgIf } from '@angular/common';
 import { Customer } from './pages/profile/model/customer-object';
-import { DeliveryAddress } from './pages/profile/model/deliveryAddress-object';
 import { AuthService } from './shared/services/auth.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HomeComponent,ProfileComponent,MenuComponent,NgIf],
+  imports: [RouterOutlet,MenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -38,7 +34,7 @@ export class AppComponent {
     this.authService.currentUser$.subscribe((user: Customer | null) => {
       this.currentUser = user;
       console.log('User from AuthService:', user);
-      this.router.navigate(['/home'])
+      //this.router.navigate(['/home'])
     });}
 
 }

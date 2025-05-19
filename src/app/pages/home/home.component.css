@@ -144,6 +144,28 @@
     max-width: 500px;
     margin: 0 auto;
   }
+
+  .center-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.center-button-container button {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #ff9800;
+  color: white;
+}
+
+.center-button-container button:hover {
+  background-color: #fb8c00;
+}
+
   
   .register-card mat-card-title {
     font-size: 1.8rem;

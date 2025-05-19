@@ -1,0 +1,84 @@
+/* Általános konténer stílus */
+.login-section,
+.register-section {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Kártya stílus */
+.login-card,
+.register-card {
+  padding: 24px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+}
+
+/* Kártya cím */
+mat-card-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #3e2723;
+}
+
+mat-card-subtitle {
+  font-size: 1rem;
+  color: #795548;
+  margin-bottom: 10px;
+}
+
+/* Input mezők */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #f3f3f3;
+  border-radius: 6px;
+}
+
+input.mat-input-element {
+  background-color: transparent;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+/* Gomb stílus */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+button[mat-raised-button][color="primary"] {
+  background-color: #3f51b5;
+  color: white;
+}
+
+button[mat-raised-button][color="primary"]:hover {
+  background-color: #303f9f;
+}
+
+button[mat-raised-button][color="accent"] {
+  background-color: #ff9800;
+  color: white;
+}
+
+button[mat-raised-button][color="accent"]:hover {
+  background-color: #fb8c00;
+}
+
+/* Hibaüzenet */
+p[style*="color: red"] {
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+/* Mobil optimalizálás */
+@media (max-width: 600px) {
+  .login-section,
+  .register-section {
+    margin: 20px 10px;
+  }
+}

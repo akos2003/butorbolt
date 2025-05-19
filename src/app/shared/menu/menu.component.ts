@@ -1,17 +1,25 @@
-import { AfterViewInit, Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { Customer } from '../../pages/profile/model/customer-object';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-menu',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
 })
-export class MenuComponent implements OnInit, AfterViewInit {
-
+export class MenuComponent {
+   @Input() user: Customer | null = null;
    @Output() pageChanged = new EventEmitter<string>();
 
     menuValue:boolean=false;
     menu_icon :string ='&#9776';
+
+
+  constructor(private authService : AuthService){}
+
 
   startMenu(){
      this.menuValue =! this.menuValue ;
@@ -25,13 +33,13 @@ export class MenuComponent implements OnInit, AfterViewInit {
      console.log("we are going to:" + page);
    }
 
-  ngOnInit(): void {
-    
+  logout(){
+    console.log("logging out")
+    this.user = null;
+    this.authService.signOut();
   }
 
-  ngAfterViewInit(): void {
-    
-  }
+
 
 
 }

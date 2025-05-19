@@ -4,7 +4,7 @@
     <mat-card-header>
       <mat-icon>chair</mat-icon>
       <mat-card-title>Welcome to the shop! </mat-card-title>
-      <mat-card-subtitle>Happy to see you here.</mat-card-subtitle>
+      <mat-card-subtitle style="color: black;">Happy to see you here, {{currentUser?.name}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
       <p>Total Orders: <strong>0</strong></p>
@@ -17,7 +17,7 @@
     <h2><mat-icon>favorite</mat-icon> Wishlist</h2>
     <mat-grid-list cols="2" rowHeight="2:1" gutterSize="16px">
       <mat-grid-tile *ngFor="let item of wishlist">
-        <mat-card class="wishlist-card">
+        <mat-card class="wishlist-card" appHighlight>
           <img mat-card-image [src]="item.image" alt="{{ item.name }}">
           <mat-card-content>
             <h3>{{ item.name }}</h3>
@@ -49,7 +49,7 @@
         </mat-form-field>
 
         <button mat-raised-button color="primary" type="submit" [disabled]="!addressForm.valid">
-          <mat-icon>save</mat-icon> Save Address
+          <mat-icon appHighlight>save</mat-icon> Save Address
         </button>
       </form>
     </mat-card>

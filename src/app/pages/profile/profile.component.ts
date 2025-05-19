@@ -16,6 +16,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSelectModule } from '@angular/material/select';
 import { CommonModule } from '@angular/common';
 import { NgForOf } from '@angular/common';
+import { AuthService } from '../../shared/services/auth.service';
+import { HighlightDirective } from './highlight.directive';
 
 
 @Component({
@@ -34,18 +36,25 @@ import { NgForOf } from '@angular/common';
     MatSnackBarModule,
     NgForOf,
     CommonModule,
-    MatSelectModule],
+    MatSelectModule,
+  HighlightDirective],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
 })
 export class ProfileComponent {
-  @Input() user!: Customer;
+  currentUser : Customer | null = null;
 
   @Output() newAddress = new EventEmitter<DeliveryAddress>();
   @Output() updateCustomer = new EventEmitter<Customer>();
 
-  constructor(private snackBar: MatSnackBar) {
+  constructor(private snackBar: MatSnackBar, private authService:AuthService) {
 
+  }
+
+  ngOnInit(){
+     this.authService.currentUser$.subscribe((user: Customer | null) => {
+      this.currentUser = user;
+    });
   }
 
   wishlist = [
@@ -77,4 +86,5 @@ export class ProfileComponent {
     city: '',
     postal: 0
   };
+
 }
